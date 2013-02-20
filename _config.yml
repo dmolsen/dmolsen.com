@@ -1,0 +1,48 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://dmolsen.com
+title: dmolsen.com
+subtitle: when i need more than 140 characters
+author: Dave Olsen
+description:
+
+# Default date format is "ordinal" (resulting in "July 22nd 2007")
+# You can customize the format as defined in
+# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
+# Additionally, %o will give you the ordinal representation of the day
+date_format: "ordinal"
+
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: /atom.xml
+subscribe_email:
+
+# RSS feeds can list your email address if you like
+email:
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+root: /
+permalink: /:year/:month/:day/:title
+source: source
+destination: public
+plugins: plugins
+code_dir: downloads/code
+category_dir: /categories
+markdown: rdiscount
+pygments: false                 # default python pygments have been replaced by pygments.rb
+
+paginate: 5                     # Posts per page on the blog index
+pagination_dir: /               # Directory base for pagination URLs eg. /blog/page/2/
+recent_posts: 5                 # Posts in the sidebar Recent Posts section
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+
+titlecase: false                # Converts page and post titles to titlecase
+
+# Analytics
+google_analytics_tracking_id: UA-16720180-1
+gauges_tracking_id: 4e247013f5a1f52df7000001
