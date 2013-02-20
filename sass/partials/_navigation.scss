@@ -1,0 +1,130 @@
+.nav {
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		float: left;
+		margin: 0 1.4em 0 0;
+	}
+	
+	li:after {
+		height: 0;
+		display: block;
+		content: "\007C";
+		font-weight: bold;
+		color: $highlite;
+		font-size: 0.9em;
+		position: relative;
+		text-align: right;
+		left: 1em;
+		top: -1.6em;
+	}
+
+	li:last-child:after {
+		content: '';
+	}
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a:hover, a:active {
+  	color: $highlite;
+	}
+	
+	img {
+		width: 1.3em;
+		height: 1.3em;
+	}
+	
+	#rss-img {
+		float: right;
+		margin-right: -0.6em;
+	}
+	
+}
+
+.nav-container {
+	margin: 0;
+	padding: 0.625em 1.25em 0.625em 2.8em;
+	position: relative;
+	z-index: 10;
+	background-color: $darkgrey;
+	-moz-box-shadow: 0 0.313em 0.625em #aaa;
+	-webkit-box-shadow: 0 0.313em 0.625em #aaa;
+	box-shadow: 0 0.313em 0.625em #aaa;
+}
+
+@media screen and (max-width: $tnybreak) {
+
+	.nav {
+	
+		ul {
+			width: 100%;
+		}
+		
+		li {
+			width: 33%;
+			margin: 0;
+			font-size: 1.15em;
+		}
+		
+		li:after {
+			content: '';
+		}
+		
+		li:nth-child(3n+1) {
+			float: left;
+			text-align: left;
+		}
+		
+		li:nth-child(3n+2) {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+		
+		li:nth-child(3n+3) {
+			float: right;
+			text-align: right;
+		}
+		
+		li:nth-child(n+4) {
+			margin-top: 0.4em;
+		}
+		
+		#rss-img {
+			margin-top: 0.7em;
+			margin-right: 0em;
+		}
+		
+	}
+	
+	.nav-container {
+		margin: 0;
+		padding-left: 1.25em;
+	}
+	
+}
+
+@media screen and (min-width: $midbreak) {
+
+	.nav #rss-img {
+		margin-right: 16.5%;
+	}
+	
+}
+
+@media screen and (min-width: $lrgbreak) {
+
+	.nav #rss-img {
+		margin-right: 30%;
+	}
+	
+}

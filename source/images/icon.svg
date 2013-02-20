@@ -1,0 +1,16 @@
+<svg viewBox="0 0 46 46" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<link xmlns="http://www.w3.org/1999/xhtml"  href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'></link>
+		<style>
+			text { text-anchor: left; font-family: 'Roboto Condensed', sans-serif; font-size: 34px; text-rendering: geometricPrecision; }
+		</style>
+	</defs>
+	<g>
+		<clipPath id="circ-mask">
+			<circle r="22" cx="22" cy="23" />
+		</clipPath>
+	</g>
+	<text x="7" y="39" style="fill: #fc0;" >D</text>
+	<circle r="22" cx="22" cy="23" style="fill: #000;" />
+	<text x="7" y="39" clip-path="url(#circ-mask)" style="fill: #fff;">D</text>
+</svg>

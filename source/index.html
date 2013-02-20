@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="blog-index" role="main">
+	{% assign index = true %}
+	{% assign l = '1' %}
+	{% for post in paginator.posts %}
+		{% if paginator.page == 1 %}
+			{% if l == '1' %}
+				{% assign content = post.content %}
+				<article><div class="article">
+					{% include article.html %}
+				</div></article>
+				{% assign l = '2' %}
+			{% endif %}
+		{% else %}
+			{% assign content = post.content %}
+			<article><div class="article divider">
+				{% include article.html %}
+			</div></article>
+		{% endif %}
+  {% endfor %}
+</div>
+<aside role="complementary">
+	{% if paginator.page == 1 %}
+		<h3>Other Recent Posts</h3>
+		<ul id="recent_posts">
+			{% assign k = '1' %}
+			{% for post in site.posts limit: 5 %}
+				{% if k == '1' %}
+					{% assign k = '2' %}
+				{% else %}
+					<li class="post">
+						<a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+	<div class="pagination">
+		{% if paginator.next_page %}
+			<div id="previous_link"><a class="prev" href="{{paginator.next_page}}">&larr; Older</a></div>
+		{% endif %}
+			<div id="blog_archives_link"><a href="/archives">Blog Archives</a></div>
+		{% if paginator.previous_page %}
+			<div id="next_link"><a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a></div>
+		{% endif %}
+		<div class="clearfix"></div>
+	</div>
+</aside>

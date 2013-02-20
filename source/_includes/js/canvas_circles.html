@@ -1,0 +1,53 @@
+	<script>
+	
+		var body      = document.getElementById('canvas-container');
+		var container = document.getElementById('container');
+	
+		if (container.offsetWidth > 1023) {
+			var canvas = document.createElement('canvas');
+			if (canvas.getContext && canvas.getContext('2d')) {
+		
+				var context   = canvas.getContext('2d');
+
+				canvas.height = (window.innerHeight > container.offsetHeight) ? window.innerHeight : container.offsetHeight;
+				canvas.width  = container.offsetWidth*0.3;
+
+				var sizes     = [ '20', '40', '60', '80' ];
+				var colors    = [ '666', '999', 'CCC' ];
+				var sColor    = 'FFCC00';
+				var sColorSet = false;
+				var total     = 16;
+
+				context.fillStyle = '#f2f2f2';
+				context.fillRect(0,0,canvas.width,canvas.height);
+
+				for (var i = 0; i < total; i++) {
+
+					var centerX = Math.floor(Math.random()*canvas.width+82);
+					var centerY = Math.floor(Math.random()*(canvas.height-82));
+					var radius  = sizes[Math.floor(Math.random()*sizes.length)];
+					var color   = colors[Math.floor(Math.random()*colors.length)]
+
+					context.beginPath();
+					context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+					if ((radius == '40') && (!sColorSet)) {
+						context.fillStyle = '#'+sColor;
+						context.fill();
+						sColorSet = true;
+					} else {
+						context.fillStyle = '#'+color;
+						context.fill();
+					}
+
+					context.lineWidth   = 2;
+					context.strokeStyle = '#000';
+					context.stroke();
+
+				}
+			
+				body.style.backgroundSize  = canvas.width+'px '+canvas.height+'px';
+				body.style.backgroundImage = 'url(\''+canvas.toDataURL()+'\')';
+			
+			}
+		}
+	</script>

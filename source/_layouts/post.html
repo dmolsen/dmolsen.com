@@ -1,0 +1,21 @@
+---
+layout: default
+single: true
+---
+
+<article class="hentry" role="article"><div class="article">
+	{% include article.html %}
+	<footer>
+		{% if page.previous.url %}
+			<p id="prev-article-link" class="meta">
+				Previous post: <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"> {{page.previous.title}}</a>
+			</p>
+		{% endif %}
+		{% if page.next.url %}
+		<p id="next-article-link" class="meta">
+			Next post: <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}}</a>
+		</p>
+		{% endif %}
+  </footer>
+</div></article>
+

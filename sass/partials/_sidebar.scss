@@ -1,0 +1,87 @@
+.sidebar {
+
+	width: 100%;
+	margin: 0;
+	padding: 0 1.25em 1.25em 1.25em;
+	float: left;
+	
+	img.flex {
+		min-width: 8em;
+		max-width: 15em;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	h3 {
+		font-size: 1.3em;
+		margin-bottom:  0.3em;
+	}
+	
+	h3 + p {
+		margin-top: 0;
+	}
+	
+	p, li {
+		font-size: 0.85em;
+	}
+	
+	ul {
+		list-style: none;
+		margin-bottom: 1.5em;
+		padding-left: 1.4em;
+		
+		li:before {
+			height: 0;
+			margin-left: -0.7em;
+			content: "\203A\00a0";
+			color: $highlite;
+			display: block;
+			font-weight: bold;
+		}
+	}
+	
+	a {
+		color: #000;
+	}
+	
+	a:hover {
+		color: $highlite;
+	}
+	
+}
+
+@media screen and (min-width: $tnybreak) and (max-width: $smlbreak) {
+
+	.sidebar {
+
+			padding: 0 2.5em 1.25em 2.5em;
+
+			#smashing-book-info {
+				width: 60%;
+				float: left;
+			}
+		
+			#smashing-book-img {
+				width: 40%;
+				float: right;
+				margin-top: -1.3em;
+			}
+			
+	}
+	
+}
+
+@media screen and (min-width: $smlbreak) {
+
+	.sidebar {
+		width: 30%;
+		padding: 1.125em 2em 1.25em 2em;
+		float: right;
+	}
+	
+	h3:nth-child(n+2) {
+		margin-top: 2em;
+	}
+	
+}

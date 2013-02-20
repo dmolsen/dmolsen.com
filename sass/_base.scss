@@ -1,0 +1,43 @@
+$highlite: #fc0;
+$darkgrey: #333;
+$darkgray: #444;
+$midgrey:  #ccc;
+$litegray: #f0f0f0;
+$litegrey: #f2f2f2;
+
+$tnybreak: 31.25em;
+$smlbreak: 52.5em;
+$midbreak: 73em; // was 68
+$lrgbreak: 93.75em;
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $litegrey;
+
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+p, li {
+	line-height: 1.5;
+}
+
+h1, h2, h3 {
+	font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+@media screen and (min-width: $tnybreak) {
+
+	h2 {
+		font-size: 2em;
+	}
+
+}
